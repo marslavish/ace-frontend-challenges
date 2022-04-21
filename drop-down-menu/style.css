@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e9ecef;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2rem;
+  gap: 2rem;
+}
+
+.nav-list li {
+  list-style: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown::after {
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  display: inline-block;
+  background: url("./arrow.png") no-repeat;
+  right: -1.6rem;
+  top: -0.2rem;
+}
+
+.dropdown__menu {
+  position: absolute;
+  margin-top: 0.5rem;
+  width: 10rem;
+  padding: 0.8rem 0 0.8rem 0;
+  border: 1px solid #ced4da;
+  background: #fff;
+  display: none;
+}
+
+.dropdown__menu li {
+  list-style: none;
+  width: 100%;
+  line-height: 3.2rem;
+  padding-left: 1rem;
+}
+
+.dropdown__menu li:hover {
+  background: #e9ecef;
+  cursor: pointer;
+}
+
+.dropdown-open {
+  display: block;
+}
